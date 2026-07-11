@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Imagination Leap LLC — Logistics Intelligence for the Laredo–Texas Corridor</title>
+<meta name="description" content="Weekly Pulse: Friction Score, diesel forecasts and crossing optimization for the Laredo–Texas I-35 corridor. Data intelligence for carriers, brokers and importers.">
+<style>
+  :root{
+    --navy:#0a0f1e; --navylight:#0d1a36; --panel:#101b33;
+    --teal:#0ea5e9; --teal-soft:#7dd3fc;
+    --green:#22c55e; --amber:#f59e0b;
+    --ink:#f1f5f9; --ink2:#94a3b8; --line:#1e293b;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--navy); color:var(--ink);
+    font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6;
+  }
+  .wrap{max-width:980px;margin:0 auto;padding:0 24px}
+  a{color:var(--teal)}
+
+  /* ── Hero ── */
+  header{padding:72px 0 56px;border-bottom:1px solid var(--line)}
+  .kicker{color:var(--teal);font-size:.8rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
+  h1{font-size:clamp(1.9rem,5vw,3rem);font-weight:800;letter-spacing:-.02em;margin:.35em 0 .4em}
+  .sub{color:var(--ink2);font-size:1.12rem;max-width:640px}
+  .cta-row{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-block;padding:13px 26px;border-radius:8px;font-weight:700;
+       text-decoration:none;font-size:1rem}
+  .btn-primary{background:var(--teal);color:#04121f}
+  .btn-primary:hover{background:var(--teal-soft)}
+  .btn-ghost{border:1px solid var(--teal);color:var(--teal)}
+  .btn-ghost:hover{background:var(--navylight)}
+  .pulse{margin-top:40px}
+
+  /* ── Sections ── */
+  section{padding:56px 0;border-bottom:1px solid var(--line)}
+  .sec-title{font-size:.8rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+             color:var(--teal);margin-bottom:8px}
+  h2{font-size:1.6rem;font-weight:800;letter-spacing:-.01em;margin-bottom:14px}
+  p.lead{color:var(--ink2);max-width:680px}
+
+  /* ── Sample tiles (from the actual Weekly Pulse) ── */
+  .sample-note{color:var(--ink2);font-size:.85rem;margin:18px 0 14px}
+  .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
+  .tile{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px 16px}
+  .tile .lbl{font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink2)}
+  .tile .val{font-size:1.9rem;font-weight:800;margin:6px 0 2px}
+  .tile .val small{font-size:1rem;font-weight:600;color:var(--ink2)}
+  .tile .meta{font-size:.8rem;color:var(--ink2)}
+  .badge{display:inline-block;margin-top:8px;font-size:.72rem;font-weight:800;letter-spacing:.08em}
+  .c-green{color:var(--green)} .c-amber{color:var(--amber)} .c-teal{color:var(--teal)}
+
+  /* ── Features ── */
+  .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:24px}
+  .feat{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:22px}
+  .feat h3{font-size:1.02rem;margin-bottom:6px}
+  .feat p{color:var(--ink2);font-size:.92rem}
+
+  /* ── Pricing ── */
+  .price-card{background:var(--navylight);border:1px solid var(--teal);border-radius:12px;
+              padding:32px;max-width:520px;margin-top:24px}
+  .price{font-size:2.6rem;font-weight:800}
+  .price small{font-size:1rem;color:var(--ink2);font-weight:600}
+  .price-card ul{list-style:none;margin:18px 0 24px}
+  .price-card li{padding:6px 0;color:var(--ink2)}
+  .price-card li::before{content:"▸ ";color:var(--teal);font-weight:800}
+
+  /* ── Sources strip ── */
+  .sources{display:flex;gap:10px 26px;flex-wrap:wrap;margin-top:18px;
+           color:var(--ink2);font-size:.85rem;font-weight:600}
+
+  /* ── ES block ── */
+  .es{background:var(--navylight);border-radius:12px;padding:28px;margin-top:8px}
+  .es h2{font-size:1.25rem}
+
+  footer{padding:40px 0 56px;color:var(--ink2);font-size:.85rem}
+  footer .brandline{color:var(--ink);font-weight:700;margin-bottom:6px}
+
+  @media (prefers-color-scheme: light){ /* page commits to dark brand deliberately */ }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="kicker">Imagination Leap LLC · Houston, TX</div>
+    <h1>Logistics intelligence for the<br>Laredo–Texas corridor</h1>
+    <p class="sub">We turn public data streams — CBP wait times, EIA diesel prices, BTS freight
+      volumes — into operational decisions for carriers, brokers and importers moving freight
+      through the busiest commercial land crossing in North America.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="mailto:ynares@gmail.com?subject=Weekly%20Pulse%20—%20free%20sample&body=Hi%2C%20I%27d%20like%20a%20free%20sample%20of%20the%20Weekly%20Pulse.">Get a free sample</a>
+      <a class="btn btn-ghost" href="#pulse">See what's inside</a>
+    </div>
+    <div class="pulse" aria-hidden="true">
+      <svg width="320" height="44" viewBox="0 0 320 44" fill="none">
+        <path d="M2 22 H120 L138 13 L158 38 L178 8 L196 27 L210 22 H318"
+              stroke="#0ea5e9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<section id="pulse">
+  <div class="wrap">
+    <div class="sec-title">The product</div>
+    <h2>Weekly Pulse — your Monday 7am corridor briefing</h2>
+    <p class="lead">One PDF, every Monday, before your dispatch day starts. Four decisions,
+      already made with data:</p>
+
+    <p class="sample-note">Live metrics from an actual edition (July 10, 2026):</p>
+    <div class="tiles">
+      <div class="tile">
+        <div class="lbl">Friction Score</div>
+        <div class="val">36.3<small>/100</small></div>
+        <div class="meta">Weekly range 26.8 – 55.8</div>
+        <div class="badge c-green">▸ LOW FRICTION</div>
+      </div>
+      <div class="tile">
+        <div class="lbl">Diesel · South Texas</div>
+        <div class="val">$4.225<small>/gal</small></div>
+        <div class="meta">4-week forecast: $4.011</div>
+        <div class="badge c-amber">▸ WAIT TO BUY</div>
+      </div>
+      <div class="tile">
+        <div class="lbl">Corridor saturation</div>
+        <div class="val">46.2<small>/100</small></div>
+        <div class="meta">BTS Laredo · 72-month baseline</div>
+        <div class="badge c-teal">▸ NORMAL</div>
+      </div>
+      <div class="tile">
+        <div class="lbl">Recommended crossing</div>
+        <div class="val" style="font-size:1.25rem;line-height:1.3">World Trade Bridge</div>
+        <div class="meta">Ranked vs. 3 other bridges · est. wait 35 min</div>
+        <div class="badge c-teal">▸ BEST OPTION</div>
+      </div>
+    </div>
+
+    <div class="features">
+      <div class="feat">
+        <h3>Friction Score</h3>
+        <p>A single 0–100 index of how hard it is to move freight through Laredo this week —
+           border delays, fuel cost and lane utilization, weighted and tracked daily.</p>
+      </div>
+      <div class="feat">
+        <h3>Diesel buy/wait signal</h3>
+        <p>A 4-week price forecast for South Texas diesel with a concrete signal: buy now,
+           or wait. Timed fuel purchases pay for the subscription by themselves.</p>
+      </div>
+      <div class="feat">
+        <h3>Crossing optimization</h3>
+        <p>All four Laredo commercial bridges scored and ranked, so your drivers queue at
+           the right one.</p>
+      </div>
+      <div class="feat">
+        <h3>Congestion outlook</h3>
+        <p>Corridor demand vs. a 72-month baseline — know when to lock capacity before
+           rates move.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-title">Pricing</div>
+    <h2>Simple subscription. First one is free.</h2>
+    <div class="price-card">
+      <div class="price">$300 <small>USD / month</small></div>
+      <ul>
+        <li>Weekly Pulse PDF in your inbox, every Monday 7am CST</li>
+        <li>Friction Score, diesel signal, congestion outlook, bridge ranking</li>
+        <li>Executive summary + next-week outlook, written for operators</li>
+        <li>Cancel anytime — no contract</li>
+      </ul>
+      <a class="btn btn-primary" href="mailto:ynares@gmail.com?subject=Weekly%20Pulse%20—%20free%20sample&body=Hi%2C%20I%27d%20like%20a%20free%20sample%20of%20the%20Weekly%20Pulse.">Get your free sample</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-title">Methodology</div>
+    <h2>Built on public data, modeled in-house</h2>
+    <p class="lead">Every number in the Pulse traces to an official source, refreshed
+      automatically every 4 hours. Models: friction index (FS v2), seasonal diesel
+      forecasting (STL + ETS ensembles), demand anomaly detection, node optimization.</p>
+    <div class="sources">
+      <span>CBP Border Wait Times</span><span>EIA Petroleum</span>
+      <span>BTS TransBorder Freight</span><span>TxDOT AADT</span><span>FMCSA QCMobile</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="es">
+      <div class="sec-title">Para transportistas</div>
+      <h2>Inteligencia del corredor Laredo–Texas, en español</h2>
+      <p class="lead" style="margin-bottom:16px">Monitoreamos tiempos de espera CBP, precio del
+        diesel y saturación del corredor con datos en tiempo real, y lo convertimos en
+        recomendaciones accionables: cuándo comprar diesel, por cuál puente cruzar y qué
+        esperar la próxima semana. Reporte semanal en PDF, cada lunes a las 7am.</p>
+      <a class="btn btn-ghost" href="mailto:ynares@gmail.com?subject=Weekly%20Pulse%20—%20muestra%20gratis&body=Hola%2C%20me%20interesa%20una%20muestra%20gratis%20del%20Weekly%20Pulse.">Pide una muestra gratis</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="brandline">Imagination Leap LLC</div>
+    <div>3006 N Fry Rd, Ste 200 · Katy, TX 77449 · United States</div>
+    <div>ynares@gmail.com</div>
+    <div style="margin-top:10px">© 2026 Imagination Leap LLC. All rights reserved.</div>
+  </div>
+</footer>
+
+</body>
+</html>
